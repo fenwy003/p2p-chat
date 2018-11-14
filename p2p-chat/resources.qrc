@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/test">
+        <file>unisa-48px.png</file>
+        <file>Helpful Links.docx</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ChatWindow</class>
+ <widget class="QMainWindow" name="ChatWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>821</width>
+    <height>693</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>821</width>
+    <height>693</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>ChatWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Nickname:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="usernameEdit"/>
+      </item>
+      <item>
+       <widget class="QPushButton" name="startButton">
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Start Chatting!</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout_6">
+      <item>
+       <widget class="QLabel" name="messageLabel">
+        <property name="text">
+         <string>Messages</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_3">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>348</width>
+          <height>17</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QLabel" name="userLabel">
+        <property name="text">
+         <string>Connected Users</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_4">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>38</width>
+          <height>17</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QLabel" name="roomLabel">
+        <property name="text">
+         <string>Private Chat Rooms</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_5">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>148</width>
+          <height>17</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+    <item row="2" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QListView" name="listView">
+        <property name="minimumSize">
+         <size>
+          <width>400</width>
+          <height>307</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QListWidget" name="participantsListWidget">
+        <property name="minimumSize">
+         <size>
+          <width>140</width>
+          <height>307</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QListWidget" name="roomListWidget">
+        <property name="minimumSize">
+         <size>
+          <width>249</width>
+          <height>0</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="3" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QLineEdit" name="lineEdit"/>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton">
+        <property name="text">
+         <string>Send</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="4" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout_4">
+      <item>
+       <widget class="QLabel" name="fileAttachLabel">
+        <property name="text">
+         <string>File Attachments     </string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QLabel" name="imgAttachLabel">
+        <property name="text">
+         <string>Image Attachments</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+    <item row="5" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout_5">
+      <item>
+       <widget class="QListWidget" name="fileAttachmentsList">
+        <property name="minimumSize">
+         <size>
+          <width>190</width>
+          <height>150</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QListWidget" name="imageAttachmentsList">
+        <property name="minimumSize">
+         <size>
+          <width>200</width>
+          <height>150</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>821</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuProfile">
+    <property name="title">
+     <string>Profile</string>
+    </property>
+    <property name="toolTipsVisible">
+     <bool>true</bool>
+    </property>
+    <addaction name="profileSettings"/>
+   </widget>
+   <widget class="QMenu" name="menuChat_History">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="title">
+     <string>Chat History</string>
+    </property>
+    <property name="toolTipsVisible">
+     <bool>true</bool>
+    </property>
+    <addaction name="actionExport_As_Text_Document"/>
+   </widget>
+   <widget class="QMenu" name="menuSend">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="title">
+     <string>Send</string>
+    </property>
+    <property name="toolTipsVisible">
+     <bool>true</bool>
+    </property>
+    <addaction name="sendFilesAction"/>
+    <addaction name="sendImagesAction"/>
+    <addaction name="actionSingleUser_Send_File"/>
+    <addaction name="actionSingleUser_Send_Image"/>
+    <addaction name="actionSend_File_To_A_Room"/>
+    <addaction name="actionSend_Image_To_A_Room"/>
+   </widget>
+   <widget class="QMenu" name="menuPrivate_Chat">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="title">
+     <string>Private Chat</string>
+    </property>
+    <property name="toolTipsVisible">
+     <bool>true</bool>
+    </property>
+    <addaction name="privateChatRoomAction"/>
+    <addaction name="actionTo_Another_User"/>
+    <addaction name="actionTo_A_Prviate_Chat_Room"/>
+   </widget>
+   <widget class="QMenu" name="menuRoom_Actions">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="title">
+     <string>Private Room Actions</string>
+    </property>
+    <property name="toolTipsVisible">
+     <bool>true</bool>
+    </property>
+    <addaction name="actionPerform_An_Action"/>
+   </widget>
+   <addaction name="menuProfile"/>
+   <addaction name="menuChat_History"/>
+   <addaction name="menuSend"/>
+   <addaction name="menuPrivate_Chat"/>
+   <addaction name="menuRoom_Actions"/>
+  </widget>
+  <action name="profileSettings">
+   <property name="text">
+    <string>Settings</string>
+   </property>
+   <property name="toolTip">
+    <string>Change user profile settings</string>
+   </property>
+  </action>
+  <action name="sendFilesAction">
+   <property name="text">
+    <string>Files</string>
+   </property>
+   <property name="toolTip">
+    <string>Select a file to be sent to all connected users</string>
+   </property>
+  </action>
+  <action name="sendImagesAction">
+   <property name="text">
+    <string>Images</string>
+   </property>
+   <property name="toolTip">
+    <string>Select an image to be sent to all connect users</string>
+   </property>
+  </action>
+  <action name="privateChatRoomAction">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>New Private Chat Room</string>
+   </property>
+   <property name="toolTip">
+    <string>Creates a new private chat room</string>
+   </property>
+  </action>
+  <action name="actionExport_As_Text_Document">
+   <property name="text">
+    <string>Export As Text Document</string>
+   </property>
+   <property name="toolTip">
+    <string>Export chat history as a plain text document without any formatting</string>
+   </property>
+  </action>
+  <action name="actionTo_Another_User">
+   <property name="text">
+    <string>To Another User</string>
+   </property>
+   <property name="toolTip">
+    <string>Sends a private message to only one user</string>
+   </property>
+  </action>
+  <action name="actionSingleUser_Send_File">
+   <property name="text">
+    <string>Send File To An User</string>
+   </property>
+   <property name="toolTip">
+    <string>Send a file to only one user</string>
+   </property>
+  </action>
+  <action name="actionSingleUser_Send_Image">
+   <property name="text">
+    <string>Send Image To An User</string>
+   </property>
+   <property name="toolTip">
+    <string>Send an image to only one user</string>
+   </property>
+  </action>
+  <action name="actionTo_A_Prviate_Chat_Room">
+   <property name="text">
+    <string>Send Private Message To A Private Chatroom</string>
+   </property>
+   <property name="toolTip">
+    <string>Send a private message to all users in a private chat room</string>
+   </property>
+  </action>
+  <action name="actionPerform_An_Action">
+   <property name="text">
+    <string>Perform Room Action</string>
+   </property>
+   <property name="toolTip">
+    <string>Opens a dialog which allows user to choose which room action to perform and the action's target</string>
+   </property>
+  </action>
+  <action name="actionSend_File_To_A_Room">
+   <property name="text">
+    <string>Send File To A Room</string>
+   </property>
+   <property name="toolTip">
+    <string>Send a file to all users in a private chat room</string>
+   </property>
+  </action>
+  <action name="actionSend_Image_To_A_Room">
+   <property name="text">
+    <string>Send Image To A Room</string>
+   </property>
+   <property name="toolTip">
+    <string>Send an image to all users in a private chat room</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
